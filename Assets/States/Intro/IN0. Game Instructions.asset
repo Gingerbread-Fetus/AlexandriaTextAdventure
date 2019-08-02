@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
+  m_Name: IN0. Game Instructions
+  m_EditorClassIdentifier: 
+  storyText: 'Welcome to this game!
+
+
+    The way to play is simple, just read the entry on each screen and press the button
+    on the keyboard that matches the entry next to the path that you want to take
+    next.
+
+
+    Press q to quit at any time.
+
+
+    1. Continue'
+  nextStates:
+  - {fileID: 11400000, guid: a9012ce58fad0d14cba40c3db506d6d0, type: 2}
