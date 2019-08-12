@@ -22,3 +22,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: eeac1890daa8cf54e9dbe53c105dca11, type: 2}
   - {fileID: 11400000, guid: 9118806d1af7676409d7bdc7c12437ab, type: 2}
   - {fileID: 11400000, guid: 1b8751938c438f341b338756b0837211, type: 2}
+  flagToSet: None
+  flagValues:
+  - Former Slave
+  - Merchant
+  requiredFlags:
+    requirement: 
+    value: 

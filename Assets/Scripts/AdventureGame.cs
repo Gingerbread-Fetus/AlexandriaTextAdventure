@@ -10,6 +10,7 @@ public class AdventureGame : MonoBehaviour
     [SerializeField] State startingState;
     
     State state;
+    Dictionary<string, string> flags;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,11 @@ public class AdventureGame : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha1 + index))
             {
                 state = nextStates[index];
+                //Set any flags relevant to that choice.
+                if (!state.flagToSet.Equals("None"))
+                {
+                    flags.Add(state.flagToSet, state.flagValues[index]); 
+                }
             }
         }
         textComponent.text = state.GetStateStory();
