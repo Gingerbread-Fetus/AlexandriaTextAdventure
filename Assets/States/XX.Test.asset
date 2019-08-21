@@ -18,5 +18,5 @@ MonoBehaviour:
   linkText: Test
   flagRequirement:
     flagKey: TestKey
+    flagValue: 
     requirementValue: TestValue
-    setFlag: 

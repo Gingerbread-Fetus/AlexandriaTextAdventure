@@ -15,4 +15,9 @@ MonoBehaviour:
   storyText: 
   nextStates:
   - {fileID: 11400000, guid: 64e96cf6624257e43a33192644969eef, type: 2}
+  - {fileID: 11400000, guid: fa1803ffff99b4d4ab63c969f2bcee0e, type: 2}
   linkText: Mixologist
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

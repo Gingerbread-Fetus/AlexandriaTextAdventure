@@ -15,4 +15,9 @@ MonoBehaviour:
   storyText: 
   nextStates:
   - {fileID: 11400000, guid: 64e96cf6624257e43a33192644969eef, type: 2}
+  - {fileID: 11400000}
   linkText: Security Expert
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

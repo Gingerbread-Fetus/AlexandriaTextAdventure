@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyText: 
   nextStates:
-  - {fileID: 11400000, guid: e16afb9e91b87ea45ba6fb145ea199d9, type: 2}
+  - {fileID: 11400000, guid: 7f14e0f3b0f6e314b9706cf985f82f09, type: 2}
   linkText: Choose a pilot
   flagRequirement:
     flagKey: 
+    flagValue: 
     requirementValue: 
-    setFlag: 

@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
-  m_Name: IN12.1. Isani
+  m_Name: IN14.1 Lucius
   m_EditorClassIdentifier: 
   storyText: 
   nextStates:
-  - {fileID: 11400000, guid: e16afb9e91b87ea45ba6fb145ea199d9, type: 2}
-  - {fileID: 11400000, guid: f6ea9d25f570a214db02fba273590c42, type: 2}
-  linkText: Isani
+  - {fileID: 11400000, guid: e4bd80a2daadcd24a86ec5af2eed99d4, type: 2}
+  linkText: Choose an engineer
   flagRequirement:
     flagKey: 
     flagValue: 

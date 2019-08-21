@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyText: 
   nextStates:
-  - {fileID: 11400000, guid: e4bd80a2daadcd24a86ec5af2eed99d4, type: 2}
+  - {fileID: 11400000, guid: b25f590824c4b904581180a919f4714c, type: 2}
   linkText: Choose an engineer
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 
