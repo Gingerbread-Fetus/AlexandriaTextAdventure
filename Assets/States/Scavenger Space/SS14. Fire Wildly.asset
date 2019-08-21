@@ -15,3 +15,4 @@ MonoBehaviour:
   storyText: 
   nextStates:
   - {fileID: 11400000, guid: 4e1d0cac97f0b924c9fb908eac16c645, type: 2}
+  linkText: Fire Wildly

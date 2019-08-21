@@ -15,3 +15,9 @@ MonoBehaviour:
   storyText: 
   nextStates:
   - {fileID: 11400000, guid: c8db812854317374aa0218827dbb2d04, type: 2}
+  - {fileID: 11400000, guid: f66f2132913abf942a1eb0ed1430e817, type: 2}
+  linkText: Choose a medic
+  flagRequirement:
+    flagKey: 
+    requirementValue: 
+    setFlag: 

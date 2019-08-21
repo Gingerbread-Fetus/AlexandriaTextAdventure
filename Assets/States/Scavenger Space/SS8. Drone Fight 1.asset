@@ -15,3 +15,4 @@ MonoBehaviour:
   storyText: 
   nextStates:
   - {fileID: 11400000, guid: aa58bdd2aa856ab41ae835b1affdb7c2, type: 2}
+  linkText: Fight the drones

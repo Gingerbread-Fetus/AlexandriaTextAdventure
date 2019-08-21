@@ -15,3 +15,4 @@ MonoBehaviour:
   storyText: 
   nextStates:
   - {fileID: 11400000, guid: 3ec877cc5efd31240a5cd81f1465a090, type: 2}
+  linkText: Use your experience with old tech

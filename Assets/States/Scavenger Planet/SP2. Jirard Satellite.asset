@@ -19,3 +19,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8f5d41a03784c15439a9a733107eccba, type: 2}
   - {fileID: 11400000, guid: 299015aafbe621043bbe2b7be5f16ff1, type: 2}
   - {fileID: 11400000, guid: 0de6303c0a16530498838609cb5b4f90, type: 2}
+  linkText: Jirard connects to the satellite.

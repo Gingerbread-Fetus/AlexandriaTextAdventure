@@ -16,3 +16,4 @@ MonoBehaviour:
   nextStates:
   - {fileID: 11400000, guid: 9a9d4c3066658f5449fccc7af90b68dc, type: 2}
   - {fileID: 11400000, guid: 00654faa97062c24aa1614aea73e69eb, type: 2}
+  linkText: You sense you can interface with the drone

@@ -18,3 +18,4 @@ MonoBehaviour:
     1. Restart'
   nextStates:
   - {fileID: 11400000, guid: 66cdc91dcfaf3e14cb19137555f8f711, type: 2}
+  linkText: Game Over

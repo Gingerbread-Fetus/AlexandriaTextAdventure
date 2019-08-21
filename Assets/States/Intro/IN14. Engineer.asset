@@ -15,3 +15,4 @@ MonoBehaviour:
   storyText: 
   nextStates:
   - {fileID: 11400000, guid: e4bd80a2daadcd24a86ec5af2eed99d4, type: 2}
+  linkText: Choose an engineer

@@ -15,17 +15,14 @@ MonoBehaviour:
   storyText: "Centuries ago, everyone believed that the galaxy was experiencing undending
     peace. With no end in sight to its prosperity. But that end did come. And now,
     nobody really seems to agree on how it happened. By the time that you were born,
-    most people were too busy scraping by to care.\r\n\r\nChoose your origin:\r\n1.Former
-    Slave\r\n2.Merchant"
+    most people were too busy scraping by to care.\r\n\r\nChoose your origin:\r\n"
   nextStates:
   - {fileID: 11400000, guid: ce1d6dee8f722bb49931cfbcf80efafe, type: 2}
   - {fileID: 11400000, guid: eeac1890daa8cf54e9dbe53c105dca11, type: 2}
   - {fileID: 11400000, guid: 9118806d1af7676409d7bdc7c12437ab, type: 2}
   - {fileID: 11400000, guid: 1b8751938c438f341b338756b0837211, type: 2}
-  flagToSet: None
-  flagValues:
-  - Former Slave
-  - Merchant
-  requiredFlags:
-    requirement: 
-    value: 
+  linkText: Prologue
+  flagRequirement:
+    flagKey: TestKey
+    flagValue: TestValue
+    requirementValue: 

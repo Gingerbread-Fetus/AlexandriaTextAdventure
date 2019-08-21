@@ -16,3 +16,4 @@ MonoBehaviour:
   nextStates:
   - {fileID: 11400000, guid: 414730b9d090c9342aef51a0f3dd4f37, type: 2}
   - {fileID: 11400000, guid: dd75315d704afb145b456d1a562d211f, type: 2}
+  linkText: Man the guns yourself

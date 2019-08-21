@@ -4,12 +4,15 @@ using RotaryHeart.Lib.SerializableDictionary;
 using UnityEngine;
 
 [System.Serializable]
-public class RequirementPair
+public class FlagRequirement
 {
-    [SerializeField]
-    string requirement;
-    [SerializeField]
-    string value;
+    //Every state that has a requirement requires a flag to check in the flags dictionary
+    public string flagKey;
+    //This is the variable used to set the flag in the adventure game class. This of course is different than the key required for the state to be read.
+    public string flagValue;
+    //This is the requirement for this state to be shown, likewise, every state with a requirement value requires a key to check in the flags dictionary
+    public string requirementValue;
+    
 }
 
 [CreateAssetMenu(menuName = "State")]
@@ -18,16 +21,10 @@ public class State : ScriptableObject
     [TextArea(10,14)][SerializeField] string storyText;
     [SerializeField] State[] nextStates;
 
-    //Flags that are set by this state
-    [SerializeField]
-    public string flagToSet;
-    [SerializeField]
-    public string[] flagValues;
+    [SerializeField] string linkText;
 
-    //Flags that are required for this state
     [SerializeField]
-    public RequirementPair requiredFlags;
-
+    FlagRequirement flagRequirement;
 
     public string GetStateStory()
     {
@@ -37,5 +34,25 @@ public class State : ScriptableObject
     public State[] GetNextStates()
     {
         return nextStates;
+    }
+
+    public string GetLinkText()
+    {
+        return linkText;
+    }
+
+    public string CheckRequirementValue()
+    {
+        return flagRequirement.requirementValue;
+    }
+
+    public string GetFlagKey()
+    {
+        return flagRequirement.flagKey;
+    }
+
+    public string GetFlagValue()
+    {
+        return flagRequirement.flagValue;
     }
 }

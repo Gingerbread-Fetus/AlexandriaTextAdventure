@@ -15,3 +15,4 @@ MonoBehaviour:
   storyText: 
   nextStates:
   - {fileID: 11400000, guid: 77c557affea600646805dcbdce77c3a1, type: 2}
+  linkText: Run for it
