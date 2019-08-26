@@ -28,7 +28,7 @@ public class AdventureGame : MonoBehaviour
 
     private void ManageState()
     {
-        string sb = "";
+        string sb = "\n";
         var nextStates = state.GetNextStates();
         for(int index = 0; index < nextStates.Length; index++)
         {
