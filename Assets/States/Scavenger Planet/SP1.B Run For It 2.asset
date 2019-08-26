@@ -12,6 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SP1.B Run For It 2
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: "In the end, none of the scavengers volunteer to go with you. To them
+    it seems better to wait for another ship rather than risk what would almost certainly
+    be certain death in their inferior vessels.\r\n\r\nAs your ship passes from the
+    outer orbit of the lonely planet, hundreds of individual signals appear on your
+    ships sensors."
   nextStates: []
   linkText: Keep running
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

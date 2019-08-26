@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: IN10. Ship
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: Description of your ship.
   nextStates:
   - {fileID: 11400000, guid: 74b64c3480de85f4b8e602c38915415d, type: 2}
   linkText: Ship
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

@@ -12,7 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SS6. Mikah Swarm Reaction
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: "\u201CBastards!\u201D he shouts, as a small and covertly prepared volley
+    from the small forward guns is released. The shots seem to stall the already damaged
+    ship, which still does not respond to hails. From the edge of the star system
+    is a growing blob of similar small ships, all coming from near light speeds. Mikah
+    has already turned the ship around, giving you a significant advantage over the
+    swarm quickly encroaching on you. Mikah's opportunism gives you such a lead on
+    the swarm that you're able to avoid them."
   nextStates:
   - {fileID: 11400000, guid: 9a9d4c3066658f5449fccc7af90b68dc, type: 2}
   linkText: Mikah suddenly reacts
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

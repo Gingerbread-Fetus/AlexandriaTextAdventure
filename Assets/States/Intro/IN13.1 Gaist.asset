@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: IN13.1 Gaist
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: Gaist is tall and built, his body covered with hard grey scales from
+    his head to his tail. He has a reputation of being tough and detached, but highly
+    efficient above all else in his work.
   nextStates:
   - {fileID: 11400000, guid: c8db812854317374aa0218827dbb2d04, type: 2}
   - {fileID: 11400000, guid: e16afb9e91b87ea45ba6fb145ea199d9, type: 2}

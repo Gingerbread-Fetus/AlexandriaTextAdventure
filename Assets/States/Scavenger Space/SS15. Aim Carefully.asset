@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SS15. Aim Carefully
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: 'You manage to keep the drone swarm at bay, carefully choosing your shots
+    and timing them well. Surprisingly few of the drones get close enough to do damage
+    to your ship. You hold them off long enough for your crew to notice a signal coming
+    from a small scavenger settlement. '
   nextStates:
   - {fileID: 11400000, guid: 9a9d4c3066658f5449fccc7af90b68dc, type: 2}
   linkText: Aim Carefully
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

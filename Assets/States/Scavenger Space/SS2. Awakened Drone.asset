@@ -12,9 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SS2. Awakened Drone
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: There are no life signs detectable on board the vessel. But still it
+    seems to react to the probing of your ship sensors. You detect a power surge as
+    the defense systems come online. The ship seems to be surging toward you with
+    its weapons charged.
   nextStates:
   - {fileID: 11400000, guid: 1499ba8bca01bf84cb98926e9136ae9b, type: 2}
   - {fileID: 11400000, guid: 32b040e3fcff223478a14cdb7f93df84, type: 2}
   - {fileID: 11400000, guid: 658d754a61b4b5d48820ba31c159fbf6, type: 2}
   linkText: Awakened drone
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: IN7. Paleotech
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: Paleotech like you are those who have taken an interest in the study,
+    collection, and use of the technological artifacts of the old galactic government.
   nextStates:
   - {fileID: 11400000, guid: 64e96cf6624257e43a33192644969eef, type: 2}
   - {fileID: 11400000, guid: fa1803ffff99b4d4ab63c969f2bcee0e, type: 2}

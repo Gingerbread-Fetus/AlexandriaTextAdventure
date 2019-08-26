@@ -12,7 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SP6. Lucky Satellite
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: Lucky seems to go catatonic. Hardly moving for hours while he works with
+    a weak connection to the satellite. He becomes so quiet at one point that when
+    you enter the room to check on him you can hear the servos and joints of his body
+    rotating and clicking. After a long period of work he comes back to reality. Noting
+    that he found a way to work around the droids protocols and fix them and the relay.
   nextStates:
   - {fileID: 11400000, guid: 92e6643c4356f8c4f9c2eb9c7fc17579, type: 2}
   linkText: Lucky can interface with the satellite
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

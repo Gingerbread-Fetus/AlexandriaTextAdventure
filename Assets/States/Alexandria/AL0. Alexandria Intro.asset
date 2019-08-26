@@ -12,7 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: AL0. Alexandria Intro
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: "Finally, Alexandria is before you. It\u2019s no surprise that the planet
+    was once a capital for the old Empire. The planet is absolutely Massive, especially
+    for a terrestrial planet. From orbit the planet appears to be a giant green ball.
+    With blue-green lakes decorating the service that must be as large as seas on
+    other planets.\r\nAlexandria was less verdant in the past. But when the government
+    fell apart, the inhabitants didn\u2019t see much of a point in keeping up the
+    diligent attention it took to keep the rapidly growing jungle at bay. Eventually
+    the inhabitants disappeared into the massive foliage. Rumors tell of isolated
+    groups of enlightened tribes that protect the ruins on the planet like they are
+    holy temples."
   nextStates:
   - {fileID: 11400000, guid: 60b031431fca4f547aa2198a25ee5a07, type: 2}
   linkText: To Alexandria
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

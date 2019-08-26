@@ -12,7 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SP5. Thrall Satellite
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: "Although the instructions given by the satellite don\u2019t make sense
+    to a normal organic\u2019s brain. To you the binary chattering of the machine
+    is quite simple and easy to copy. You find that the signal the satellite is broadcasting
+    is easily mimicked by any ship. And with a new intimate knowledge of the satellite
+    you are able to pass this info along to everyone easily. Thus, clearing an easy
+    path for your ramshackle fleet onwards. The relay is repaired quickly without
+    having to worry about the drone swarm.\r\nAt the relay the scavenger elder thanks
+    you for your time as his fleet begins to jump clear of the mining swarm at last."
   nextStates:
   - {fileID: 11400000, guid: 92e6643c4356f8c4f9c2eb9c7fc17579, type: 2}
   linkText: You can interface with the satellite
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

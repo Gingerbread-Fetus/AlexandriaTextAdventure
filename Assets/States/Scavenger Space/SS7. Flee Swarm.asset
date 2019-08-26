@@ -12,7 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SS7. Flee Swarm
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: 'As your ship maneuvers to avoid the drone it seems to react, coming
+    to life quickly and beginning pursuit. Weak volleys from its mining lasers glance
+    off the shields of your ship. Far too weak to get through or cause any real damage.
+    However, as you''re moving your way towards the edge of this system, towards escaping
+    to safe jump distance more and more ships begin to appear on your sensors. A swarm
+    of mining drones is now diligently following you and your crew. Even as you prepare
+    to jump to then next system your sensors are tracking hundreds of engines that
+    are ready to do the same. '
   nextStates:
   - {fileID: 11400000, guid: aa58bdd2aa856ab41ae835b1affdb7c2, type: 2}
   linkText: Attemp to flee the swarm
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

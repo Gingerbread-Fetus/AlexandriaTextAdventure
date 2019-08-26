@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SS10. Mikah Explosion
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: The fuel cell leaves your air lock and tumbles through space, just as
+    the drones try to feed on it, the device explodes violently. Shrapnel is sent
+    in all directions shredding hundreds of drones. While many of them are destroyed,
+    there are still hundreds on hundreds left.
   nextStates:
   - {fileID: 11400000, guid: 9a9d4c3066658f5449fccc7af90b68dc, type: 2}
   linkText: Mikah wants to detonate an explosive
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

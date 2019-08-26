@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SS8. Drone Fight 1
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: Perhaps it is better not to allow a malfunctioning autonomous machine
+    to drift around in occupied space. You order $engineer to open fire on the drone.
+    But as you do, the deactivated machine spins to life and begins to fire back.
+    And as it does, you detect similar signals appearing on the edge of the system.
   nextStates:
   - {fileID: 11400000, guid: aa58bdd2aa856ab41ae835b1affdb7c2, type: 2}
   linkText: Fight the drones
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

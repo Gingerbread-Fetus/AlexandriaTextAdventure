@@ -12,7 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: IN11. Beginning
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: "You have been hired for a very peculiar contract. It would seem that
+    a collector would like for you to put together a team and travel into an old galactic
+    government capital to recover an old computer. While most precursor computers
+    have little data of use, depending on their state of decay, they have value to
+    collectors.\r\n\r\nTheseus-01, or T-1 to the collection of wayward people who
+    somehow call it home, takes its name from a constellation that was allegedly visible
+    from the human homeworld. And it is the home to The White Bull, a dimly lit bar
+    that is still dusty and dirty, no matter how many sterilization checks they do
+    on visitors to the station. Dirty as any earthbound pub that you've ever been
+    to at least. The White Bull is also the closest place where you might be able
+    to pick up the crew members that you need. You approach the notification board,
+    which flashes to life as you approach its proximity monitor.\r\n\r\nThe average
+    crew for a ship of your size is going to need a pilot, and engineer, and a medic.\r\n"
   nextStates:
   - {fileID: 11400000, guid: f6ea9d25f570a214db02fba273590c42, type: 2}
   linkText: Start your journey
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

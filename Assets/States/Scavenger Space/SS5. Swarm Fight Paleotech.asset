@@ -12,7 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SS5. Swarm Fight Paleotech
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: You remember having read once that these old drones usually had exclusion
+    zones, areas where they were forbidden to operate. A quick scan of the system
+    is able to quickly find one such zone within easy reach. As you reach safety,
+    the drones can be seen on your sensors and in many of the viewports on the ship,
+    circling like a hungry swarm.
   nextStates:
   - {fileID: 11400000, guid: 9a9d4c3066658f5449fccc7af90b68dc, type: 2}
   linkText: Your history comes in handy in this fight
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

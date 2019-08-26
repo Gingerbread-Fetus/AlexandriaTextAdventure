@@ -12,9 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SS9. Drone Fight 2
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: 'Despite the weak weapons on these mining drones, their sheer number
+    makes them more than a credible threat. The shields on your ship can absorb much
+    of the incoming energy. The difficult, and more dangerous problem, is the drones
+    simply ramming the ship or trying to attach to it. Thus far, none of them have
+    been able to penetrate the hull. '
   nextStates:
   - {fileID: 11400000, guid: 6679e53994dee544cba14a85f74a4fc3, type: 2}
   - {fileID: 11400000, guid: 4316d84825e2b524885124334de332bb, type: 2}
   - {fileID: 11400000, guid: 2e4408da19d148e499c65cba28d80071, type: 2}
   linkText: Continued
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

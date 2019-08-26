@@ -12,7 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: AL1. Alexandria Proper
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: "You land on Alexandria to discover that the jungle has overgrown all
+    of what used to be one solid mass of cityscape. Buildings sink into lakes, Trees
+    grow in and out of skyscrapers, grow bigger than them. You follow the local coordinates
+    that were given to you in the contract. To your surprise. The coordinates seem
+    to be for a library.\r\nMany of the systems inside are either dead or barely hanging
+    on. But to your surprise, much of the datashelves are still accessible and contain
+    potentially valuable info available for download. As you and your team move deeper
+    into the library, there are even physical copies of books as well. Something that
+    could go to a collector for a fortune if the titles are right.\r\nAs the instructions
+    detailed, you move into the basement levels. The security has long been deactivated,
+    but as you get closer to your goal you can hear a robotic voice chattering aloud.\r\n\u201CThe
+    earliest homeworlds of the galactic government were actually run by reptilians.\u201D
+    It says as you enter the room. \u201CHumans seem to have evolved most directly
+    from primates.\u201D There\u2019s a small talking personality core on a stand
+    in the room. You realize that as you approach it, it is talking\r\nabout human
+    history. \u201CI am Object 43-H. My reconstruction algorithms are 97.53% correct.
+    What would you like to know about galactic history?\u201D"
   nextStates:
   - {fileID: 11400000, guid: 66cdc91dcfaf3e14cb19137555f8f711, type: 2}
   linkText: Landing on Alexandria
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

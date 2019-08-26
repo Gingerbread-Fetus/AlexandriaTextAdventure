@@ -12,8 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SS13. Man the Guns
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: There are so many identical dots on the targeting console that you can
+    hardly decide which one of them you want to focus on. They form a long winding
+    tail behind your ship. Hot on your trail. What do you do?
   nextStates:
   - {fileID: 11400000, guid: 414730b9d090c9342aef51a0f3dd4f37, type: 2}
   - {fileID: 11400000, guid: dd75315d704afb145b456d1a562d211f, type: 2}
   linkText: Man the guns yourself
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

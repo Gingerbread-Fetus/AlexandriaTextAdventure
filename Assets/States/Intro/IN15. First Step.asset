@@ -12,7 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: IN15. First Step
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: "The first step of your journey will take you to Alexandria-One, a former
+    capitol planet for the galactic empire . Most buildings there are now overrun
+    with jungle, or overtaken by heavy flooding. Your directions are highly specific,
+    down to exactly what building and what room you need to get into. However, the
+    instructions are less specific about what the device you are to retrieve from
+    these ruins actually does. In fact, they mention you should look for \"Object
+    43-H\" and nothing else. The specific characteristics of this device are also
+    described.\r\n\r\nThe first step to Alexandria is through the Scavengers territory.
+    Typically benign salvagers who strip abandoned empire-era ships for materials
+    stalk this zone. The wreckage of which is dangerously thick. They've formed a
+    loose collective to ward off pirates, but are very welcome to visitors. Especially
+    if they have any objects of interest for trade. They don't often communicate outside
+    of their own territory, preferring to wait for merchants and travellers to come
+    to the relative safety of their home."
   nextStates:
   - {fileID: 11400000, guid: 8f24f9d26f7ed1f4695744eb11c3796e, type: 2}
   linkText: Take the first step
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

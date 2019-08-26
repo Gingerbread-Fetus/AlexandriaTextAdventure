@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: IN5. Smuggler
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: Those who know how to get things and where to get them are valuable assets
+    to any team. You also enjoy a reputation of discretion and charasmatic negotiation.
   nextStates:
   - {fileID: 11400000, guid: fa1803ffff99b4d4ab63c969f2bcee0e, type: 2}
   - {fileID: 11400000, guid: a9012ce58fad0d14cba40c3db506d6d0, type: 2}

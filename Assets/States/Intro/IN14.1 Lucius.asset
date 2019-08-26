@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: IN14.1 Lucius
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: Lucius has a glowing record of service, with many captains on his record
+    stating his loyalty to whoever is paying him is very rarely in question. He requests
+    more than a little pay extra than the rest, but does come at a recommendation
+    of extremely high skill.
   nextStates:
   - {fileID: 11400000, guid: e4bd80a2daadcd24a86ec5af2eed99d4, type: 2}
   linkText: Choose an engineer

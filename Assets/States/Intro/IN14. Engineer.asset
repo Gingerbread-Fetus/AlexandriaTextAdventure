@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: IN14. Engineer
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: It should go without saying that the job of an engineer is important
+    to running any ship. There are many things that can go wrong on a starship, hundreds
+    of thousands of possibilities that require improvisation to solve. Knowledgeable
+    engineers can bypass any malfunction, and are keenly aware of the complex mechanics
+    of starships.
   nextStates:
   - {fileID: 11400000, guid: b25f590824c4b904581180a919f4714c, type: 2}
   linkText: Choose an engineer

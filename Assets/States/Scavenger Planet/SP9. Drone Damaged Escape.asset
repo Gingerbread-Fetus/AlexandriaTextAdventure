@@ -12,7 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SP9. Drone Damaged Escape
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: "Despite the speed of your ship, the sheer number of drones proves to
+    be too great for it to handle.\r\nBy the time that you reach the relay, your vessel
+    is scarred with impact craters and the burns of the drones mining lasers. It feels
+    as if you just barely made it through. You make a note in your ledger that the
+    repairs will be expensive."
   nextStates:
   - {fileID: 11400000, guid: 92e6643c4356f8c4f9c2eb9c7fc17579, type: 2}
   linkText: You limp away from the drones
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

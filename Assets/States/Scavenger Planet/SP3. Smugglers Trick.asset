@@ -12,7 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SP3. Smugglers Trick
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: "It's an old trick that you learned when you had to avoid automated patrols
+    in the early days of your smuggling career. Rig some explosives somewhere else
+    and the law won't you on the other side of town.\r\n\r\nThe drones don\u2019t
+    quite respond as expected. They actually chase the missiles back and forth as
+    they spiral to the moon, sometimes crashing into them. And when those that make
+    it through crash into the moon the drones set to work picking up the pieces. Thus
+    doubling the effectiveness of htis method. "
   nextStates:
   - {fileID: 11400000, guid: 92e6643c4356f8c4f9c2eb9c7fc17579, type: 2}
   linkText: Use a smugglers trick
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

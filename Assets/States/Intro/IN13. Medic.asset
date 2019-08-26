@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: IN13. Medic
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: Some people believe that they have enough medical supplies to cover any
+    bumps or bruises that they could get out in deep space. But alien environs are
+    full of diseases, parasites, and pathogens that will make short work of any unprepared
+    crew.
   nextStates:
   - {fileID: 11400000, guid: a045fc08fe2d41c4cb54386987757fa4, type: 2}
   linkText: Choose a medic

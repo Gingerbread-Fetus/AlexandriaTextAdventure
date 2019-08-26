@@ -12,7 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SP11. Axels Decoy
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: "\"Use one of the more useless scavenger ships as a decoy.\" Axel suggests.
+    It takes quite a bit of convincing to find a ship that one of the scavengers is
+    willing to part with. But the ship found isn't going to do him much good anyways,
+    especially because he can't get off the planet.\r\n\r\nThe vessel is launched
+    and can barely limp into high orbit, and notably it has been filled with volatile
+    materials rigged to explode. As soon as it clears the protective invisible barrier
+    that the satellite provides the drones begin to swarm it. At that same moment
+    you and your new allies begin a break neck speed drive for the relay, with ships
+    jumping one after another as soon as they can. With a very brief goodbye, your
+    new friend jumps and you follow him quickly, jumping in the opposite direction
+    into the system that is your goal."
   nextStates:
   - {fileID: 11400000, guid: 92e6643c4356f8c4f9c2eb9c7fc17579, type: 2}
   linkText: Order Axel to fire a decoy
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

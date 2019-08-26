@@ -12,7 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SS11. Lucky Asteroids
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: With Lucky at the helm he winds the ship through the tight corners and
+    small spaces like a thread through the head of a needle. The unwieldy size of
+    the swarm struggles to keep up, constantly crashing into rocks as it tries to
+    squeeze in behind you. However, they are constantly getting closer. Suddenly,
+    A message comes through on the comms, coordinates to an inhabited planet.
   nextStates:
   - {fileID: 11400000, guid: 9a9d4c3066658f5449fccc7af90b68dc, type: 2}
   linkText: Lucky believes he can navigate through
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

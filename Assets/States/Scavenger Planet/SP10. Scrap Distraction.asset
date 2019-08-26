@@ -12,7 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SP10. Scrap Distraction
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: The bait that you create for the drones amounts to nothing more than
+    a ball of scrap. As tightly packed together as the trash compactors can manage.
+    Everything from recycled food containers to ship parts is packed in nice and tight,
+    and then; using an overclocked escape pod thruster, launched toward the opposite
+    end of the solar system.
   nextStates:
   - {fileID: 11400000, guid: 92e6643c4356f8c4f9c2eb9c7fc17579, type: 2}
   linkText: Use scrap to distract them.
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

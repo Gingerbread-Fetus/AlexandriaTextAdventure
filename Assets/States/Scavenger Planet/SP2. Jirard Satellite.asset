@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SP2. Jirard Satellite
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: Using your combined knowledge, you and Jirard manage to make a simple
+    device that should allow the relay to function as normal. At least for long enough
+    that everyone can get through. However, this means that you still have to get
+    past the swarm.
   nextStates:
   - {fileID: 11400000, guid: ab8586fea3c55204c9e085beacb04bd2, type: 2}
   - {fileID: 11400000, guid: 404e2068ddde0fa458fb015d8c8e08f8, type: 2}
@@ -20,3 +23,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 299015aafbe621043bbe2b7be5f16ff1, type: 2}
   - {fileID: 11400000, guid: 0de6303c0a16530498838609cb5b4f90, type: 2}
   linkText: Jirard connects to the satellite.
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

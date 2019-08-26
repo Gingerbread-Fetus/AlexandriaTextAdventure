@@ -41,8 +41,8 @@ public class AdventureGame : MonoBehaviour
                 //Next we want to check the requirement that a state that sets a flag, has a key to set it to
                 else if (!String.IsNullOrEmpty(state.GetFlagValue()) && !String.IsNullOrEmpty(state.GetFlagKey()))
                 {
-                    Debug.Log("Add Key: " + state.GetFlagKey() + " with value: " + state.GetFlagValue());
-                    flags.Add(state.GetFlagKey(), state.GetFlagValue());
+                    //flags.Add(state.GetFlagKey(), state.GetFlagValue());
+                    flags[state.GetFlagKey()] = state.GetFlagValue();
                 }
                 //Otherwise something has gone wrong
                 else

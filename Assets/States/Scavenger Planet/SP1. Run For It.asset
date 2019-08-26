@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SP1. Run For It
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: "Upon hearing of your plan, the leaders of the Scavengers are not happy.
+    They know that they aren\u2019t equipped to stop you. Some of them even want to
+    risk making the run alongside your ship.\r\n\r\nHowever, they know that not all
+    of them will be able to go through. "
   nextStates:
   - {fileID: 11400000, guid: 77c557affea600646805dcbdce77c3a1, type: 2}
   linkText: Run for it
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

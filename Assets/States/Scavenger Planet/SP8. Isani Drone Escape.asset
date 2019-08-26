@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SP8. Isani Drone Escape
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: "Isani navigates through the swarm\u2019s shots with skill like you\u2019ve
+    never seen. And as the drones try to ram and smash into your vessel, it dodges
+    from side to side like a breeze. You reach the relay with no problems and jump
+    to your destination. "
   nextStates:
   - {fileID: 11400000, guid: 92e6643c4356f8c4f9c2eb9c7fc17579, type: 2}
   linkText: Isani takes the controls
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

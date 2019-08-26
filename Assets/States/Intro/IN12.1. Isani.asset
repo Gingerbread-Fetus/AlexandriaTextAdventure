@@ -12,7 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: IN12.1. Isani
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: Isani comes from a humanoid race of forest dwellers on the other end
+    of the galaxy. With extremely lithe bodies and incredibly tough bones, their resilience
+    often gives them the feeling of being invincible even long into their adulthood.
+    As such, Dasos are characteristically known as impulsive risk takers. Culturally,
+    the prestige of an individual is tied primarily to their skill, and not much else.
+    Isani herself set out with a mercenary group that took her across the galaxy,
+    from rim to rim she claims, a claim backed up by the astonishing number of pilots
+    for hire who know her name. However, incident after incident of her disobeying
+    orders blots her record, and perhaps explains her retirement from her previous
+    company.
   nextStates:
   - {fileID: 11400000, guid: e16afb9e91b87ea45ba6fb145ea199d9, type: 2}
   - {fileID: 11400000, guid: f6ea9d25f570a214db02fba273590c42, type: 2}

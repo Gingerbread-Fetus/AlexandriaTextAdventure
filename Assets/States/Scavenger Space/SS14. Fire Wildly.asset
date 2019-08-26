@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SS14. Fire Wildly
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: Your rash action causes the guns to quickly overheat again and again.
+    More and more of the ships start to get through and before long your vessel is
+    overrun. The last thing you remember hearing is the vacuum of space tearing a
+    hole in your ship. You have failed.
   nextStates:
   - {fileID: 11400000, guid: 4e1d0cac97f0b924c9fb908eac16c645, type: 2}
   linkText: Fire Wildly
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

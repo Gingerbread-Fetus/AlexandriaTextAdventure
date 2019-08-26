@@ -12,10 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SS0. Jump In
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: As your ship jumps into the system that marks the edge of Scavenger space,
+    there's something strange continuously beeping on your ship sensors. The object
+    seems to be a derelict ship, presumably belonging to a Scavenger crew, now lifelessly
+    drifing in orbit around a planetoid in this system's astroid belt. Given its size
+    it would appear to be nothing more than a small mining vessel, likely mass-produced
+    centuries ago. What do you do?
   nextStates:
   - {fileID: 11400000, guid: 861fc3cb67d76264bb003b4cc943d8f9, type: 2}
   - {fileID: 11400000, guid: 430d080b92ef3c1439882c8881ab784a, type: 2}
   - {fileID: 11400000, guid: 1f85082f5f7e6874eb78c25946c09c76, type: 2}
   - {fileID: 11400000, guid: b1f8727afa8fac741af6a56d0103a6b1, type: 2}
   linkText: Jump into scavenger space
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

@@ -12,7 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SS4.B Mikah Opportunity
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: Mikah has noticed a wrecked ship that wasn't showing on the sensors before.
+    And notes that there is an opportunity to search it for goods. On board that vessel
+    are potentially valuable mechanical parts, and the bodies of the former crew.
+    Believing that the parts may be valuable later you place them in cargo and continue
+    onward.
   nextStates:
   - {fileID: 11400000, guid: 9a9d4c3066658f5449fccc7af90b68dc, type: 2}
   linkText: Mikah sees an opportunity
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

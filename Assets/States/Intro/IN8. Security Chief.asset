@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: IN8. Security Chief
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: Being trained in security doesn't just mean that you keep the ship orderly.
+    You have a greater knowledge of ships weapons systems, anti-personell weapons,
+    and ship classes, than the average person.
   nextStates:
   - {fileID: 11400000, guid: 64e96cf6624257e43a33192644969eef, type: 2}
   - {fileID: 11400000}

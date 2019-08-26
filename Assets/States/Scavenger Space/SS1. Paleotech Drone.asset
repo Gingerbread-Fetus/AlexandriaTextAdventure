@@ -12,7 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SS1. Paleotech Drone
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: "You recognize the vessel as an old mining drone, to your appraising
+    eyes, it has all the necessary markings, the shape, and of course the equipment.
+    This kind of vessel is by no means rare. However, this one seems to be behaving
+    strangely, like it's looking for something particular. These types of drones are
+    known to malfunction when they have been left off for too long. Dangerously so.
+    You decide that it would be safer to approach the ship if it were disabled, and
+    you order $engineer to open fire.\r\n\r\nNo sooner than the first hit glances
+    off the polarized plating of the drone, it spins to life and flees. Leaving behind
+    nothing more than a strange subspace distress signal."
   nextStates:
   - {fileID: 11400000, guid: 3ec877cc5efd31240a5cd81f1465a090, type: 2}
   linkText: Use your experience with old tech
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

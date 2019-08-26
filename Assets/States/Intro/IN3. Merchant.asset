@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: IN3. Merchant
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: Common merchants are both the key suppliers to settlements everywhere,
+    and the key targets of pirates. To be a successful merchant means that you're
+    either incredibly skilled or incredibly lucky, but preferably both. Your stock
+    of goods makes you a valued partner for many, and your business knowledge gives
+    you maps of popular trade routes between star systems.
   nextStates:
   - {fileID: 11400000, guid: fa1803ffff99b4d4ab63c969f2bcee0e, type: 2}
   - {fileID: 11400000, guid: a9012ce58fad0d14cba40c3db506d6d0, type: 2}

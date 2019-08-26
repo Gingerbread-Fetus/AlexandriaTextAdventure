@@ -12,8 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SS4. Cyborg Drone
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: Like a dull thrum in both of your ears, you feel as if you are somewhere
+    else while your crew is busy observing the derelict drone. Something like a low
+    whisper across the void of space begins to invade your ears. There isn't just
+    one voice, but a collection, a swarm. They don't speak in words but in primitive
+    thoughts, but you understand them perfectly. "Collect. Grow. Gather. Collect.
+    Grow. Gather." With a slow rhythm they seem to repeat in unison. There are other
+    thoughts there too, wordless ones that seem to interpret your intentions better
+    than you could ever explain. Before you know it, the drone stirs to life and drifts
+    off towards the edge of the system.
   nextStates:
   - {fileID: 11400000, guid: 9a9d4c3066658f5449fccc7af90b68dc, type: 2}
   - {fileID: 11400000, guid: 00654faa97062c24aa1614aea73e69eb, type: 2}
   linkText: You sense you can interface with the drone
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

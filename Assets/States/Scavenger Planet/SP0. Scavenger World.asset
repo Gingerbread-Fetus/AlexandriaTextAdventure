@@ -12,7 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SP0. Scavenger World
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: "This barely populated planet is orbited by a large system of satellites
+    that seem to be keeping the drones away. Like an electric fence they've chosen
+    to ignore. \r\n\r\nThere is a healthy group of scavengers here taking refuge from
+    the same swarm that just threatened you. While most of the planet is ancient ruins
+    and wildlife these marooned survivors have created a sustainable life on the isolated
+    planet. In their extended time on this planet they've built shelter, grown food,
+    and even elected a leader.\r\n\r\nShortly after your landing, he approaches you
+    and your crew. He's human, tall, with a beard that looks like he hasn't shaven
+    in months. By choice, seeing as how none of the other inhabitants have beards.\r\n\r\n
+    \u201CI'm surprised that you made it through okay. Pleasantly surprised.\u201D
+    After some brief pleasantries and telling you that he and the others have been
+    here for nearly a year, he does his best to explain the situation. \"That drone
+    swarm is an ancient mining group designed to attach to any source of material
+    that it can. It used to patrol these systems and gather any materials they needed
+    while using the excess materials to maintain and support themselves. With their
+    former drop off point uknown, we guess it's full, useless, or destroyed. So they've
+    been mistaking passing ships as valid material and using them to grow their swarm
+    exponentially.\" He stops to scratch at his beard. \"When the earliest of us discovered
+    this place and were forced down here, I think there were only a few individuals,
+    maybe a dozen.\" A moment later and he snaps back to attention. \"The source of
+    the problem is the swarm communications sattelite was damaged. When damaged, it
+    created a fault in their self-defense system. None of us can reach it to fix it.\""
   nextStates:
   - {fileID: 11400000, guid: 68d9782100373f24ea2d2158767bdded, type: 2}
   - {fileID: 11400000, guid: 1604d26751b58854194419799ebd6074, type: 2}
@@ -20,3 +41,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8f5d41a03784c15439a9a733107eccba, type: 2}
   - {fileID: 11400000, guid: 3f814ca8e4c78df43b1cb82a27380002, type: 2}
   linkText: To the scavenger world
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 

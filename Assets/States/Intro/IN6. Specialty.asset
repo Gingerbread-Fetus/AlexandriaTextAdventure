@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: IN6. Specialty
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: Your specialty will give you certain bonuses and opportunities.
   nextStates:
   - {fileID: 11400000, guid: 87128ef9f172b4448a9ad7ab2c1ddc80, type: 2}
   - {fileID: 11400000, guid: 610ffe0bfaff42f4c84238f96dc8daad, type: 2}

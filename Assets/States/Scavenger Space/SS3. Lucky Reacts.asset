@@ -12,7 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: SS3. Lucky Reacts
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: "\u201CHold Positions!\u201D Lucky whirs from the silent state that he
+    usually operates in while in the cockpit. \u201COrganics, I must inform you that
+    the ship before us is part of a much larger and more violent swarm. Please hold
+    while I try to convince it to leave.\u201D After a few seconds of near silence,
+    nothing more than the servos in his neck clicking as he occasionally looks at
+    the controls in front of him. After a minute of work, the drone seems to come
+    to life and leave.\r\n\r\nPretty soon the swarm that the lone drone belongs to
+    appears. \"Although I have convinced the swarm that we are not an object of interest.
+    I suggest we proceed towards the heading of this star's third planetoid. The drones
+    seem to be acting in a defensive mode and any hasty action could lead to us being
+    interpreted as a threat. But Captain, they seem to be actively avoiding that region
+    of space.\""
   nextStates:
   - {fileID: 11400000, guid: 9a9d4c3066658f5449fccc7af90b68dc, type: 2}
   linkText: Lucky suddenly stirs to life
+  flagRequirement:
+    flagKey: 
+    flagValue: 
+    requirementValue: 
