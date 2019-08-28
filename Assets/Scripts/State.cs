@@ -11,7 +11,7 @@ public class FlagRequirement
     //This is the variable used to set the flag in the adventure game class. This of course is different than the key required for the state to be read.
     public string flagValue;
     //This is the requirement for this state to be shown, likewise, every state with a requirement value requires a key to check in the flags dictionary
-    public string requirementValue;
+    public string requiredValue;
     
 }
 
@@ -43,7 +43,7 @@ public class State : ScriptableObject
 
     public string CheckRequirementValue()
     {
-        return flagRequirement.requirementValue;
+        return flagRequirement.requiredValue;
     }
 
     public string GetFlagKey()

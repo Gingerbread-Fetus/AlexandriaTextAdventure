@@ -20,6 +20,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a9012ce58fad0d14cba40c3db506d6d0, type: 2}
   linkText: Escaped Thrall
   flagRequirement:
-    flagKey: 
-    flagValue: 
-    requirementValue: 
+    flagKey: Origin
+    flagValue: Escaped Thrall
+    requiredValue: 

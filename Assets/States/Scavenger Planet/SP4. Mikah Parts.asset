@@ -23,6 +23,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8f5d41a03784c15439a9a733107eccba, type: 2}
   linkText: Mikah thinks the parts you have may work
   flagRequirement:
-    flagKey: 
+    flagKey: Parts
     flagValue: 
-    requirementValue: 
+    requirementValue: Obtained
