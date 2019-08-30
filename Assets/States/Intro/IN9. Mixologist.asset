@@ -15,11 +15,14 @@ MonoBehaviour:
   storyText: Once the word used for hip bartenders, this title has now become synonymous
     with the mastery of the mysterious elements of the universe. Exotic matter and
     foreign materials bend to the will of a skilled mixologist.
+  nextStatesOld: []
   nextStates:
-  - {fileID: 11400000, guid: 64e96cf6624257e43a33192644969eef, type: 2}
-  - {fileID: 11400000, guid: fa1803ffff99b4d4ab63c969f2bcee0e, type: 2}
+  - state: {fileID: 0}
+    linkText: 
+  - state: {fileID: 0}
+    linkText: 
   linkText: Mixologist
   flagRequirement:
     flagKey: 
     flagValue: 
-    requirementValue: 
+    requiredValue: 

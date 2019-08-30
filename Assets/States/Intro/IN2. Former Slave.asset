@@ -13,12 +13,15 @@ MonoBehaviour:
   m_Name: IN2. Former Slave
   m_EditorClassIdentifier: 
   storyText: 'Former Slave: Slavery is accepted now in more parts of the galaxy than
-    it isn''t. You were one of the lucky few to escape.'
+    it isn''t. You were one of the lucky few to escape.
+
+'
   nextStates:
-  - {fileID: 11400000, guid: fa1803ffff99b4d4ab63c969f2bcee0e, type: 2}
-  - {fileID: 11400000, guid: a9012ce58fad0d14cba40c3db506d6d0, type: 2}
-  linkText: Former Slave
+  - state: {fileID: 11400000, guid: fa1803ffff99b4d4ab63c969f2bcee0e, type: 2}
+    linkText: Continue to choose specialty
+  - state: {fileID: 11400000, guid: a9012ce58fad0d14cba40c3db506d6d0, type: 2}
+    linkText: Go back
   flagRequirement:
-    flagKey: 
-    flagValue: 
-    requirementValue: 
+    flagKey: Origin
+    flagValue: Slave
+    requiredValue: 

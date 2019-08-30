@@ -22,11 +22,12 @@ MonoBehaviour:
 
     Press q to quit at any time.
 
-'
+    Press 1 to continue. '
   nextStates:
-  - {fileID: 11400000, guid: a9012ce58fad0d14cba40c3db506d6d0, type: 2}
+  - state: {fileID: 11400000, guid: a9012ce58fad0d14cba40c3db506d6d0, type: 2}
+    linkText: Begin
   linkText: Back to beginning.
   flagRequirement:
     flagKey: 
     flagValue: 
-    requirementValue: 
+    requiredValue: 

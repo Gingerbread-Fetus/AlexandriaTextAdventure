@@ -2,12 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class AdventureGame : MonoBehaviour
 {
-    [SerializeField] Text textComponent;
+    [SerializeField] TMP_Text textComponent;
     [SerializeField] State startingState;
+    [SerializeField] float TextSpeed = .4f;
     Dictionary<string, string> flags;
     
     State state;
@@ -18,6 +20,8 @@ public class AdventureGame : MonoBehaviour
         flags = new Dictionary<string, string>();
         state = startingState;
         textComponent.text = state.GetStateStory();
+        //textComponent.maxVisibleCharacters = 0;
+        //StartCoroutine(AnimateTextCoroutine());
     }
 
     // Update is called once per frame
@@ -28,40 +32,63 @@ public class AdventureGame : MonoBehaviour
 
     private void ManageState()
     {
-        string sb = "\n";
-        var nextStates = state.GetNextStates();
+        string storyText;
+        NextStateLink[] nextStates = state.GetNextStates();
         for(int index = 0; index < nextStates.Length; index++)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1 + index))
             {
-                state = nextStates[index];
-                //upon visiting a state, check for and set the necessary flag
-                //if the state doesn't set a flag do nothing
-                if (String.IsNullOrEmpty(state.GetFlagValue())) {}
-                //Next we want to check the requirement that a state that sets a flag, has a key to set it to
-                else if (!String.IsNullOrEmpty(state.GetFlagValue()) && !String.IsNullOrEmpty(state.GetFlagKey()))
+                state = nextStates[index].state;
+                if (state) { }
+                else
                 {
-                    //flags.Add(state.GetFlagKey(), state.GetFlagValue());
+                    textComponent.text = "null";
+                    textComponent.maxVisibleCharacters = 4;
+                    return;
+                }
+                storyText = state.GetStateStory();
+                //upon visiting a state, check for and set the necessary flag if the state doesn't set a flag do nothing
+                if (String.IsNullOrEmpty(state.GetFlagValue())) { }
+                else if (!String.IsNullOrEmpty(state.GetFlagValue()) && !String.IsNullOrEmpty(state.GetFlagKey()))//If a state sets a flag, must have a key to set it to
+                {
                     flags[state.GetFlagKey()] = state.GetFlagValue();
                 }
-                //Otherwise something has gone wrong
                 else
                 {
                     Debug.Log("Every state that sets a flag must have a flag to assign it to.");
                 }
+
+                textComponent.text += "\n";//A line break to seperate the text from the decision links.
+
+                storyText += LinkTexts();
+                textComponent.text = storyText;
+                //start animating text after setting state.
+                StartCoroutine(AnimateTextCoroutine());
             }
-            //this should only print when the requirement is met
-            if (CheckStateFlag(nextStates[index]))
+        }
+    }
+
+    private string LinkTexts()
+    {
+        var nextStates = state.GetNextStates();
+        string storyText = "";
+        for (int index = 0; index < nextStates.Length; index++)
+        {
+            if (nextStates[index].state == null || nextStates == null)
             {
-                sb += (index + 1).ToString() + ". " + nextStates[index].GetLinkText() + " \n"; 
+                Debug.LogError("A state in Next States was not set");
+                return "ERROR";
+            }
+            if (CheckStateFlag(nextStates[index].state))
+            {
+                storyText += (index + 1).ToString() + ". " + nextStates[index].linkText + " \n";
             }
             else
             {
-                sb += (index + 1).ToString() + ". Requirement: " + nextStates[index].GetFlagValue() + " = " + nextStates[index].CheckRequirementValue() + " not met.\n";
-            }
+                storyText += (index + 1).ToString() + ". Requirement: " + nextStates[index].state.GetFlagValue() + " = " + nextStates[index].state.CheckRequirementValue() + " not met.\n";
+            } 
         }
-        textComponent.text = state.GetStateStory();
-        textComponent.text += sb;
+        return storyText;
     }
 
     private bool CheckStateFlag(State testState)
@@ -74,8 +101,22 @@ public class AdventureGame : MonoBehaviour
             Debug.Log("ERROR: Every state with a requirement must have a flag key.");
             return false;
         }
-        Debug.Log(testState.GetFlagKey() + " " + testState.CheckRequirementValue());
-        Debug.Log(flags[testState.GetFlagKey()]);
         return flags[testState.GetFlagKey()].Equals(testState.CheckRequirementValue());
+    }
+
+    /// <summary>
+    /// This method will print the story text character by character. Then append the choices array onto the end.
+    /// </summary>
+    /// <param name="LinkTextString">The connecting choices for this story state.</param>
+    private IEnumerator AnimateTextCoroutine()
+    {
+        string storytext = textComponent.text;
+        int i = 0;
+        while (i < storytext.Length)
+        {
+            textComponent.maxVisibleCharacters = i;
+            i++;
+            yield return new WaitForSeconds(TextSpeed);
+        }
     }
 }

@@ -15,30 +15,28 @@ public class FlagRequirement
     
 }
 
+[System.Serializable]
+public class NextStateLink
+{
+    public State state;//the state in question
+    public string linkText;//The text printed when it is linked to.
+}
+
 [CreateAssetMenu(menuName = "State")]
 public class State : ScriptableObject
 {
     [TextArea(10,14)][SerializeField] string storyText;
-    [SerializeField] State[] nextStates;
-
-    [SerializeField] string linkText;
-
-    [SerializeField]
-    FlagRequirement flagRequirement;
+    [SerializeField]NextStateLink[] nextStates;
+    [SerializeField]FlagRequirement flagRequirement;
 
     public string GetStateStory()
     {
         return storyText;
     }
 
-    public State[] GetNextStates()
+    public NextStateLink[] GetNextStates()
     {
         return nextStates;
-    }
-
-    public string GetLinkText()
-    {
-        return linkText;
     }
 
     public string CheckRequirementValue()
