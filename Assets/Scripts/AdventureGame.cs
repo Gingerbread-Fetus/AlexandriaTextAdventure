@@ -9,7 +9,7 @@ public class AdventureGame : MonoBehaviour
 {
     [SerializeField] TMP_Text textComponent;
     [SerializeField] State startingState;
-    [SerializeField] float TextSpeed = .4f;
+    [SerializeField] float textSpeed = .1f;
     Dictionary<string, string> flags;
 
     private ScrollRect sr;
@@ -29,6 +29,15 @@ public class AdventureGame : MonoBehaviour
     void Update()
     {
         ManageState();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            textSpeed = textSpeed / 100;
+        }
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            textSpeed = textSpeed * 100;
+        }
     }
 
     private void ManageState()
@@ -118,7 +127,7 @@ public class AdventureGame : MonoBehaviour
         {
             textComponent.maxVisibleCharacters = i;
             i++;
-            yield return new WaitForSeconds(TextSpeed);
+            yield return new WaitForSeconds(textSpeed);
         }
     }
 }
