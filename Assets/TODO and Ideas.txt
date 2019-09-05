@@ -1,5 +1,6 @@
 -A better background, find a better color scheme first. Then see about adding assets to the background. Maybe an animated space station on a starry backdrop.
 -Events? Special Effects?
--Adding buttons to the scrollable window instead of text.
--Add variables for conditional choices. If(cyborg){Do this}. This may require a method to add/remove states from the nextstates list.
-	-One way to do this may be instead to exclude certain options from showing if their conditions are NOT true. EG: if(!(Captain.Equals("Isani")){Don't print.} This would be easily achievable by adding a condition requirement to the State class, maybe just passing in a string.
+-Adding buttons to the scrollable window instead of text.(This is a maybe, but if I can make text in a TMP object clickable I may as well)
+-Add functionality for inserting character names into text. (Probably best achieved by adding a method to parse the text for delimiters)
+-Add quit functionality with the q key.
+-Add a skip key, I'm thinking I'll bind it to 's'
