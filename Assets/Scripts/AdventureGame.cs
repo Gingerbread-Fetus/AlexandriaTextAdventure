@@ -11,6 +11,8 @@ public class AdventureGame : MonoBehaviour
     [SerializeField] State startingState;
     [SerializeField] float TextSpeed = .4f;
     Dictionary<string, string> flags;
+
+    private ScrollRect sr;
     
     State state;
 
@@ -20,8 +22,7 @@ public class AdventureGame : MonoBehaviour
         flags = new Dictionary<string, string>();
         state = startingState;
         textComponent.text = state.GetStateStory();
-        //textComponent.maxVisibleCharacters = 0;
-        //StartCoroutine(AnimateTextCoroutine());
+        sr = textComponent.GetComponentInParent<ScrollRect>();
     }
 
     // Update is called once per frame
@@ -38,6 +39,7 @@ public class AdventureGame : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Alpha1 + index))
             {
+                sr.normalizedPosition = new Vector2(0, 1);//Sets the scroll rect to the top.
                 state = nextStates[index].state;
                 if (state) { }
                 else
