@@ -1,5 +1,7 @@
 -A better background, find a better color scheme first. Then see about adding assets to the background. Maybe an animated space station on a starry backdrop.
--Events? Special Effects?
+- Adding effects to the text, like temporary shaking.
+-Sound effects
+-Music
 -Adding buttons to the scrollable window instead of text.(This is a maybe, but if I can make text in a TMP object clickable I may as well)
 -Add functionality for inserting character names into text. (Probably best achieved by adding a method to parse the text for delimiters)
 -Add quit functionality with the q key.

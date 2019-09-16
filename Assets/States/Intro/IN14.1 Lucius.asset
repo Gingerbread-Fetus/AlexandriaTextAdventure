@@ -17,9 +17,11 @@ MonoBehaviour:
     more than a little pay extra than the rest, but does come at a recommendation
     of extremely high skill.
   nextStates:
-  - {fileID: 11400000, guid: e4bd80a2daadcd24a86ec5af2eed99d4, type: 2}
-  linkText: Choose an engineer
+  - state: {fileID: 11400000, guid: c8db812854317374aa0218827dbb2d04, type: 2}
+    linkText: Go back
+  - state: {fileID: 11400000, guid: e4bd80a2daadcd24a86ec5af2eed99d4, type: 2}
+    linkText: Take the first steps on your adventure
   flagRequirement:
     flagKey: 
     flagValue: 
-    requirementValue: 
+    requiredValue: 

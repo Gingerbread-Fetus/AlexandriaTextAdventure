@@ -23,10 +23,11 @@ MonoBehaviour:
     orders blots her record, and perhaps explains her retirement from her previous
     company.
   nextStates:
-  - {fileID: 11400000, guid: e16afb9e91b87ea45ba6fb145ea199d9, type: 2}
-  - {fileID: 11400000, guid: f6ea9d25f570a214db02fba273590c42, type: 2}
-  linkText: Isani
+  - state: {fileID: 11400000, guid: f6ea9d25f570a214db02fba273590c42, type: 2}
+    linkText: Go back and pick another
+  - state: {fileID: 11400000, guid: e16afb9e91b87ea45ba6fb145ea199d9, type: 2}
+    linkText: Continue to picking a medic
   flagRequirement:
     flagKey: 
     flagValue: 
-    requirementValue: 
+    requiredValue: 

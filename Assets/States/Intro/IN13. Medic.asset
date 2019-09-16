@@ -17,9 +17,9 @@ MonoBehaviour:
     full of diseases, parasites, and pathogens that will make short work of any unprepared
     crew.
   nextStates:
-  - {fileID: 11400000, guid: a045fc08fe2d41c4cb54386987757fa4, type: 2}
-  linkText: Choose a medic
+  - state: {fileID: 11400000, guid: a045fc08fe2d41c4cb54386987757fa4, type: 2}
+    linkText: Gaist
   flagRequirement:
     flagKey: 
     flagValue: 
-    requirementValue: 
+    requiredValue: 

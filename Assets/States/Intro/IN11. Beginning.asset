@@ -26,9 +26,9 @@ MonoBehaviour:
     which flashes to life as you approach its proximity monitor.\r\n\r\nThe average
     crew for a ship of your size is going to need a pilot, and engineer, and a medic.\r\n"
   nextStates:
-  - {fileID: 11400000, guid: f6ea9d25f570a214db02fba273590c42, type: 2}
-  linkText: Start your journey
+  - state: {fileID: 11400000, guid: f6ea9d25f570a214db02fba273590c42, type: 2}
+    linkText: Choose your pilot first
   flagRequirement:
     flagKey: 
     flagValue: 
-    requirementValue: 
+    requiredValue: 

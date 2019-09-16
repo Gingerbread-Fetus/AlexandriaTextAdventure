@@ -16,10 +16,11 @@ MonoBehaviour:
     his head to his tail. He has a reputation of being tough and detached, but highly
     efficient above all else in his work.
   nextStates:
-  - {fileID: 11400000, guid: c8db812854317374aa0218827dbb2d04, type: 2}
-  - {fileID: 11400000, guid: e16afb9e91b87ea45ba6fb145ea199d9, type: 2}
-  linkText: Gaist
+  - state: {fileID: 11400000, guid: e16afb9e91b87ea45ba6fb145ea199d9, type: 2}
+    linkText: Go back
+  - state: {fileID: 11400000, guid: c8db812854317374aa0218827dbb2d04, type: 2}
+    linkText: Continue to pick an engineer
   flagRequirement:
     flagKey: 
     flagValue: 
-    requirementValue: 
+    requiredValue: 

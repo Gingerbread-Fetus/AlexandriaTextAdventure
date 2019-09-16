@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyText: There are only a few names on the list that meet your needs for a pilot
   nextStates:
-  - {fileID: 11400000, guid: 7f14e0f3b0f6e314b9706cf985f82f09, type: 2}
-  linkText: Choose a pilot
+  - state: {fileID: 11400000, guid: 7f14e0f3b0f6e314b9706cf985f82f09, type: 2}
+    linkText: Isani
   flagRequirement:
     flagKey: 
     flagValue: 
-    requirementValue: 
+    requiredValue: 

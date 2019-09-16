@@ -15,10 +15,10 @@ MonoBehaviour:
   storyText: Those who know how to get things and where to get them are valuable assets
     to any team. You also enjoy a reputation of discretion and charasmatic negotiation.
   nextStates:
-  - state: {fileID: 0}
-    linkText: 
-  - state: {fileID: 0}
-    linkText: 
+  - state: {fileID: 11400000, guid: a9012ce58fad0d14cba40c3db506d6d0, type: 2}
+    linkText: Go back
+  - state: {fileID: 11400000, guid: fa1803ffff99b4d4ab63c969f2bcee0e, type: 2}
+    linkText: Contintue to choose specialty
   flagRequirement:
     flagKey: Origin
     flagValue: Smuggler

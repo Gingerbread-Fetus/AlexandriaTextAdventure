@@ -27,9 +27,9 @@ MonoBehaviour:
     of their own territory, preferring to wait for merchants and travellers to come
     to the relative safety of their home."
   nextStates:
-  - {fileID: 11400000, guid: 8f24f9d26f7ed1f4695744eb11c3796e, type: 2}
-  linkText: Take the first step
+  - state: {fileID: 11400000, guid: 8f24f9d26f7ed1f4695744eb11c3796e, type: 2}
+    linkText: FTL jump into Scavenger space
   flagRequirement:
     flagKey: 
     flagValue: 
-    requirementValue: 
+    requiredValue: 

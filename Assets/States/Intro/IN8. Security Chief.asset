@@ -16,10 +16,11 @@ MonoBehaviour:
     You have a greater knowledge of ships weapons systems, anti-personell weapons,
     and ship classes, than the average person.
   nextStates:
-  - {fileID: 11400000, guid: 64e96cf6624257e43a33192644969eef, type: 2}
-  - {fileID: 11400000}
-  linkText: Security Expert
+  - state: {fileID: 11400000, guid: fa1803ffff99b4d4ab63c969f2bcee0e, type: 2}
+    linkText: Go back
+  - state: {fileID: 11400000, guid: 64e96cf6624257e43a33192644969eef, type: 2}
+    linkText: Learn about your ship
   flagRequirement:
-    flagKey: 
-    flagValue: 
-    requirementValue: 
+    flagKey: Specialty
+    flagValue: Security Chief
+    requiredValue: 

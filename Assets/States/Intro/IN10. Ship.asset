@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyText: Description of your ship.
   nextStates:
-  - {fileID: 11400000, guid: 74b64c3480de85f4b8e602c38915415d, type: 2}
-  linkText: Ship
+  - state: {fileID: 11400000, guid: 74b64c3480de85f4b8e602c38915415d, type: 2}
+    linkText: Begin
   flagRequirement:
     flagKey: 
     flagValue: 
-    requirementValue: 
+    requiredValue: 
