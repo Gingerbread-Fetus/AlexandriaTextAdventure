@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: IN4. Escaped Thrall
   m_EditorClassIdentifier: 
-  storyText: Cyborgs, while rare, are still more common than the thralls that have
+  storyText: 'Cyborgs, while rare, are still more common than the thralls that have
     managed to break away and retain personalities apart form the synthetic collectives
     they once belonged to.
+
+'
   nextStates:
   - state: {fileID: 11400000, guid: a9012ce58fad0d14cba40c3db506d6d0, type: 2}
     linkText: Go back

@@ -13,15 +13,15 @@ public class AdventureGame : MonoBehaviour
     Dictionary<string, string> flags;
 
     private ScrollRect sr;
-    
-    State state;
+    private Coroutine animateText;
+    State currentState;
 
     // Start is called before the first frame update
     void Start()
     {
         flags = new Dictionary<string, string>();
-        state = startingState;
-        textComponent.text = state.GetStateStory();
+        currentState = startingState;
+        textComponent.text = currentState.GetStateStory();
         sr = textComponent.GetComponentInParent<ScrollRect>();
     }
 
@@ -38,31 +38,43 @@ public class AdventureGame : MonoBehaviour
         {
             textSpeed = textSpeed * 100;
         }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            StopCoroutine(animateText);
+            textComponent.maxVisibleCharacters = textComponent.text.Length;
+        }
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            StopAllCoroutines();
+            currentState = startingState;
+            textComponent.text = currentState.GetStateStory();
+            textComponent.maxVisibleCharacters = textComponent.text.Length;
+        }
     }
 
     private void ManageState()
     {
         string storyText;
-        NextStateLink[] nextStates = state.GetNextStates();
+        NextStateLink[] nextStates = currentState.GetNextStates();
         for(int index = 0; index < nextStates.Length; index++)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1 + index))
             {
                 sr.normalizedPosition = new Vector2(0, 1);//Sets the scroll rect to the top.
-                state = nextStates[index].state;
-                if (state) { }
+                currentState = nextStates[index].state;
+                if (currentState) { }
                 else
                 {
                     textComponent.text = "null";
                     textComponent.maxVisibleCharacters = 4;
                     return;
                 }
-                storyText = state.GetStateStory();
+                storyText = currentState.GetStateStory();
                 //upon visiting a state, check for and set the necessary flag if the state doesn't set a flag do nothing
-                if (String.IsNullOrEmpty(state.GetFlagValue())) { }
-                else if (!String.IsNullOrEmpty(state.GetFlagValue()) && !String.IsNullOrEmpty(state.GetFlagKey()))//If a state sets a flag, must have a key to set it to
+                if (String.IsNullOrEmpty(currentState.GetFlagValue())) { }
+                else if (!String.IsNullOrEmpty(currentState.GetFlagValue()) && !String.IsNullOrEmpty(currentState.GetFlagKey()))//If a state sets a flag, must have a key to set it to
                 {
-                    flags[state.GetFlagKey()] = state.GetFlagValue();
+                    flags[currentState.GetFlagKey()] = currentState.GetFlagValue();
                 }
                 else
                 {
@@ -74,15 +86,16 @@ public class AdventureGame : MonoBehaviour
                 storyText += LinkTexts();
                 textComponent.text = storyText;
                 //start animating text after setting state.
-                StartCoroutine(AnimateTextCoroutine());
+                animateText = StartCoroutine(AnimateTextCoroutine());
             }
         }
     }
 
     private string LinkTexts()
     {
-        var nextStates = state.GetNextStates();
-        string storyText = "";
+        var nextStates = currentState.GetNextStates();
+        string LinkText = "";
+        LinkText += "\n";//Line break to add space between body and linking texts
         for (int index = 0; index < nextStates.Length; index++)
         {
             if (nextStates[index].state == null || nextStates == null)
@@ -92,14 +105,14 @@ public class AdventureGame : MonoBehaviour
             }
             if (CheckStateFlag(nextStates[index].state))
             {
-                storyText += (index + 1).ToString() + ". " + nextStates[index].linkText + " \n";
+                LinkText += (index + 1).ToString() + ". " + nextStates[index].linkText + " \n";
             }
             else
             {
-                storyText += (index + 1).ToString() + ". Requirement: " + nextStates[index].state.GetFlagValue() + " = " + nextStates[index].state.CheckRequirementValue() + " not met.\n";
+                LinkText += (index + 1).ToString() + ". Requirement: " + nextStates[index].state.GetFlagValue() + " = " + nextStates[index].state.CheckRequirementValue() + " not met.\n";
             } 
         }
-        return storyText;
+        return LinkText;
     }
 
     private bool CheckStateFlag(State testState)
@@ -116,7 +129,7 @@ public class AdventureGame : MonoBehaviour
     }
 
     /// <summary>
-    /// This method will print the story text character by character. Then append the choices array onto the end.
+    /// This method will print the story text character by character.
     /// </summary>
     /// <param name="LinkTextString">The connecting choices for this story state.</param>
     private IEnumerator AnimateTextCoroutine()

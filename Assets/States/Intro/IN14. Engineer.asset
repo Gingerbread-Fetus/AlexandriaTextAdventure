@@ -19,7 +19,7 @@ MonoBehaviour:
     of starships.
   nextStates:
   - state: {fileID: 11400000, guid: b25f590824c4b904581180a919f4714c, type: 2}
-    linkText: 
+    linkText: Lucius
   flagRequirement:
     flagKey: 
     flagValue: 
