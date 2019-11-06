@@ -25,9 +25,9 @@ MonoBehaviour:
     interpreted as a threat. But Captain, they seem to be actively avoiding that region
     of space.\""
   nextStates:
-  - {fileID: 11400000, guid: 9a9d4c3066658f5449fccc7af90b68dc, type: 2}
-  linkText: Lucky suddenly stirs to life
+  - state: {fileID: 0}
+    linkText: 
   flagRequirement:
-    flagKey: 
+    flagKey: Pilot
     flagValue: 
-    requirementValue: 
+    requiredValue: Lucky

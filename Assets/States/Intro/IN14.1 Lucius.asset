@@ -22,6 +22,6 @@ MonoBehaviour:
   - state: {fileID: 11400000, guid: e4bd80a2daadcd24a86ec5af2eed99d4, type: 2}
     linkText: Take the first steps on your adventure
   flagRequirement:
-    flagKey: 
-    flagValue: 
+    flagKey: Engineer
+    flagValue: Lucius
     requiredValue: 

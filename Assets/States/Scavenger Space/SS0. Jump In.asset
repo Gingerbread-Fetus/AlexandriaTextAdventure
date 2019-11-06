@@ -19,12 +19,15 @@ MonoBehaviour:
     it would appear to be nothing more than a small mining vessel, likely mass-produced
     centuries ago. What do you do?
   nextStates:
-  - {fileID: 11400000, guid: 861fc3cb67d76264bb003b4cc943d8f9, type: 2}
-  - {fileID: 11400000, guid: 430d080b92ef3c1439882c8881ab784a, type: 2}
-  - {fileID: 11400000, guid: 1f85082f5f7e6874eb78c25946c09c76, type: 2}
-  - {fileID: 11400000, guid: b1f8727afa8fac741af6a56d0103a6b1, type: 2}
-  linkText: Jump into scavenger space
+  - state: {fileID: 11400000, guid: 861fc3cb67d76264bb003b4cc943d8f9, type: 2}
+    linkText: '[Paleotech] It appears to be a drone.'
+  - state: {fileID: 11400000, guid: 430d080b92ef3c1439882c8881ab784a, type: 2}
+    linkText: Scan it for life and other signals
+  - state: {fileID: 11400000, guid: 1f85082f5f7e6874eb78c25946c09c76, type: 2}
+    linkText: '[Lucky] Lucky reacts...'
+  - state: {fileID: 11400000, guid: b1f8727afa8fac741af6a56d0103a6b1, type: 2}
+    linkText: '[Cyborg] Is that ship speaking to you?'
   flagRequirement:
     flagKey: 
     flagValue: 
-    requirementValue: 
+    requiredValue: 

@@ -4,13 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using static Flags;
 
 public class AdventureGame : MonoBehaviour
 {
     [SerializeField] TMP_Text textComponent;
     [SerializeField] State startingState;
     [SerializeField] float textSpeed = .1f;
-    Dictionary<string, string> flags;
+    [SerializeField] Flags flagsData;
+
+    FlagDictionary flags;
 
     private ScrollRect sr;
     private Coroutine animateText;
@@ -19,10 +22,10 @@ public class AdventureGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        flags = new Dictionary<string, string>();
         currentState = startingState;
         textComponent.text = currentState.GetStateStory();
         sr = textComponent.GetComponentInParent<ScrollRect>();
+        flags = flagsData.getFlagDictionary();
     }
 
     // Update is called once per frame
@@ -70,16 +73,8 @@ public class AdventureGame : MonoBehaviour
                     return;
                 }
                 storyText = currentState.GetStateStory();
-                //upon visiting a state, check for and set the necessary flag if the state doesn't set a flag do nothing
-                if (String.IsNullOrEmpty(currentState.GetFlagValue())) { }
-                else if (!String.IsNullOrEmpty(currentState.GetFlagValue()) && !String.IsNullOrEmpty(currentState.GetFlagKey()))//If a state sets a flag, must have a key to set it to
-                {
-                    flags[currentState.GetFlagKey()] = currentState.GetFlagValue();
-                }
-                else
-                {
-                    Debug.Log("Every state that sets a flag must have a flag to assign it to.");
-                }
+
+                SetFlags();
 
                 textComponent.text += "\n";//A line break to seperate the text from the decision links.
 
@@ -88,6 +83,22 @@ public class AdventureGame : MonoBehaviour
                 //start animating text after setting state.
                 animateText = StartCoroutine(AnimateTextCoroutine());
             }
+        }
+    }
+
+    private void SetFlags()
+    {
+        //upon visiting a state, check for and set the necessary flag if the state doesn't set a flag do nothing
+        if (String.IsNullOrEmpty(currentState.GetFlagValue())) { }
+        else if (!String.IsNullOrEmpty(currentState.GetFlagValue()) && !String.IsNullOrEmpty(currentState.GetFlagKey()))//If a state sets a flag, must have a key to set it to
+        {
+            Debug.Log("Setting a flag: " + currentState.GetFlagKey() + " " + currentState.GetFlagValue());
+            flags[currentState.GetFlagKey()] = currentState.GetFlagValue();
+            Debug.Log(currentState.GetFlagKey() + " : " + flags[currentState.GetFlagKey()]);
+        }
+        else
+        {
+            Debug.Log("Every state that sets a flag must have a flag to assign it to.");
         }
     }
 
@@ -100,8 +111,8 @@ public class AdventureGame : MonoBehaviour
         {
             if (nextStates[index].state == null || nextStates == null)
             {
-                Debug.LogError("A state in Next States was not set");
-                return "ERROR";
+                Debug.Log("A state in Next States was not set");
+                return "\n ERROR";
             }
             if (CheckStateFlag(nextStates[index].state))
             {
@@ -109,7 +120,7 @@ public class AdventureGame : MonoBehaviour
             }
             else
             {
-                LinkText += (index + 1).ToString() + ". Requirement: " + nextStates[index].state.GetFlagValue() + " = " + nextStates[index].state.CheckRequirementValue() + " not met.\n";
+                LinkText += (index + 1).ToString() + ". Requirement: " + nextStates[index].state.GetFlagValue() + " " + nextStates[index].state.CheckRequirementValue() + " not met.\n";
             } 
         }
         return LinkText;

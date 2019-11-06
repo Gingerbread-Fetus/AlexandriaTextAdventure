@@ -21,6 +21,6 @@ MonoBehaviour:
   - state: {fileID: 11400000, guid: c8db812854317374aa0218827dbb2d04, type: 2}
     linkText: Continue to pick an engineer
   flagRequirement:
-    flagKey: 
-    flagValue: 
+    flagKey: Medic
+    flagValue: Gaist
     requiredValue: 

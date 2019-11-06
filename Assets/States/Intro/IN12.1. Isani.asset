@@ -28,6 +28,6 @@ MonoBehaviour:
   - state: {fileID: 11400000, guid: e16afb9e91b87ea45ba6fb145ea199d9, type: 2}
     linkText: Continue to picking a medic
   flagRequirement:
-    flagKey: 
-    flagValue: 
+    flagKey: Pilot
+    flagValue: Isani
     requiredValue: 
