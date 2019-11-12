@@ -12,11 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473e43dada62cb24484a9948e22b2f9e, type: 3}
   m_Name: XX.Test
   m_EditorClassIdentifier: 
-  storyText: 
+  storyText: 'Your pilot is %Pilot%
+
+    Your origin is %Origin%
+
+    Your specialty is %Specialty%
+
+    Your medic is %Medic%
+
+    Your engineer is %Engineer%'
   nextStates:
-  - {fileID: 11400000, guid: 66cdc91dcfaf3e14cb19137555f8f711, type: 2}
-  linkText: Test
+  - state: {fileID: 11400000, guid: 7f14e0f3b0f6e314b9706cf985f82f09, type: 2}
+    linkText: Go back
   flagRequirement:
-    flagKey: TestKey
+    flagKey: 
     flagValue: 
-    requirementValue: TestValue
+    requiredValue: 

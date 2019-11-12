@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using static Flags;
+using System.Text.RegularExpressions;
 
 public class AdventureGame : MonoBehaviour
 {
@@ -14,6 +14,8 @@ public class AdventureGame : MonoBehaviour
     [SerializeField] Flags flagsData;
 
     FlagDictionary flags;
+    Regex flagRegex = new Regex("(?<=%)(.*?)(?=%)");
+    Regex replaceRegex = new Regex("(%{1}[A-Z]{1}[a-z]*%{1})");
 
     private ScrollRect sr;
     private Coroutine animateText;
@@ -65,6 +67,7 @@ public class AdventureGame : MonoBehaviour
             {
                 sr.normalizedPosition = new Vector2(0, 1);//Sets the scroll rect to the top.
                 currentState = nextStates[index].state;
+
                 if (currentState) { }
                 else
                 {
@@ -80,10 +83,28 @@ public class AdventureGame : MonoBehaviour
 
                 storyText += LinkTexts();
                 textComponent.text = storyText;
+
+                InsertFlagValues();
                 //start animating text after setting state.
                 animateText = StartCoroutine(AnimateTextCoroutine());
             }
         }
+    }
+
+    private void InsertFlagValues()
+    {
+        MatchCollection matches = replaceRegex.Matches(textComponent.text);
+        textComponent.text = replaceRegex.Replace(textComponent.text, ReplaceDelimiters);
+    }
+
+    /// <summary>
+    /// This is a helper delegate that allows the above method to replace delimiters with
+    /// the desired string. EG: Character names, origins, etc.
+    /// </summary>
+    private string ReplaceDelimiters(Match m)
+    {
+        string value = flags[m.Value.Replace("%", "")];
+        return value;
     }
 
     private void SetFlags()

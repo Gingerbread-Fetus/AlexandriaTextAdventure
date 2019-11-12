@@ -29,6 +29,8 @@ MonoBehaviour:
   nextStates:
   - state: {fileID: 11400000, guid: 8f24f9d26f7ed1f4695744eb11c3796e, type: 2}
     linkText: FTL jump into Scavenger space
+  - state: {fileID: 11400000, guid: f66f2132913abf942a1eb0ed1430e817, type: 2}
+    linkText: Test State
   flagRequirement:
     flagKey: 
     flagValue: 
