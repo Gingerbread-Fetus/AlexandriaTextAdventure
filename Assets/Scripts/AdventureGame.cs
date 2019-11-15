@@ -14,12 +14,12 @@ public class AdventureGame : MonoBehaviour
     [SerializeField] Flags flagsData;
 
     FlagDictionary flags;
-    Regex flagRegex = new Regex("(?<=%)(.*?)(?=%)");
     Regex replaceRegex = new Regex("(%{1}[A-Z]{1}[a-z]*%{1})");
 
     private ScrollRect sr;
     private Coroutine animateText;
     State currentState;
+    private string storyText;
 
     // Start is called before the first frame update
     void Start()
@@ -59,7 +59,7 @@ public class AdventureGame : MonoBehaviour
 
     private void ManageState()
     {
-        string storyText;
+        
         NextStateLink[] nextStates = currentState.GetNextStates();
         for(int index = 0; index < nextStates.Length; index++)
         {
@@ -75,18 +75,38 @@ public class AdventureGame : MonoBehaviour
                     textComponent.maxVisibleCharacters = 4;
                     return;
                 }
+
                 storyText = currentState.GetStateStory();
 
                 SetFlags();
 
                 textComponent.text += "\n";//A line break to seperate the text from the decision links.
 
-                storyText += LinkTexts();
+                LinkTexts();
+
                 textComponent.text = storyText;
 
                 InsertFlagValues();
+                InsertFlavorText();
                 //start animating text after setting state.
                 animateText = StartCoroutine(AnimateTextCoroutine());
+            }
+        }
+    }
+
+    //TODO: This is all wrong
+    private void InsertFlavorText()
+    {
+        MatchCollection matches = Regex.Matches(storyText, "(<{1}.*>{1})");
+        foreach(Match match in matches)
+        {
+            string matchValue = match.Value.Trim(new Char[] {'<', '>' });
+            Debug.Log(matchValue);
+            string[] values = matchValue.Split(',');
+            Debug.Log(values.ToString());
+            if (flags[values[1]].Equals(values[2]))
+            {
+                Regex.Replace(textComponent.text, "(<{1}.*>{1})", values[0]);
             }
         }
     }
@@ -113,9 +133,7 @@ public class AdventureGame : MonoBehaviour
         if (String.IsNullOrEmpty(currentState.GetFlagValue())) { }
         else if (!String.IsNullOrEmpty(currentState.GetFlagValue()) && !String.IsNullOrEmpty(currentState.GetFlagKey()))//If a state sets a flag, must have a key to set it to
         {
-            Debug.Log("Setting a flag: " + currentState.GetFlagKey() + " " + currentState.GetFlagValue());
             flags[currentState.GetFlagKey()] = currentState.GetFlagValue();
-            Debug.Log(currentState.GetFlagKey() + " : " + flags[currentState.GetFlagKey()]);
         }
         else
         {
@@ -123,7 +141,7 @@ public class AdventureGame : MonoBehaviour
         }
     }
 
-    private string LinkTexts()
+    private void LinkTexts()
     {
         var nextStates = currentState.GetNextStates();
         string LinkText = "";
@@ -133,7 +151,7 @@ public class AdventureGame : MonoBehaviour
             if (nextStates[index].state == null || nextStates == null)
             {
                 Debug.Log("A state in Next States was not set");
-                return "\n ERROR";
+                storyText += "\n ERROR";
             }
             if (CheckStateFlag(nextStates[index].state))
             {
@@ -144,7 +162,7 @@ public class AdventureGame : MonoBehaviour
                 LinkText += (index + 1).ToString() + ". Requirement: " + nextStates[index].state.GetFlagValue() + " " + nextStates[index].state.CheckRequirementValue() + " not met.\n";
             } 
         }
-        return LinkText;
+        storyText += LinkText;
     }
 
     private bool CheckStateFlag(State testState)
