@@ -23,9 +23,12 @@ MonoBehaviour:
     Your engineer is %Engineer%
 
 
-    <Isani says "Hi"., Pilot, Isani>
+    [Isani says "Hi"., Pilot, Isani]
 
-    <This pilot DNE., Pilot, DNE>'
+    [This pilot DNE., Pilot, DNE]
+
+
+    <link="1">Testing Link markup</link>'
   nextStates:
   - state: {fileID: 11400000, guid: 7f14e0f3b0f6e314b9706cf985f82f09, type: 2}
     linkText: Go back

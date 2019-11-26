@@ -15,8 +15,7 @@ public class AdventureGame : MonoBehaviour
 
     FlagDictionary flags;
     Regex crewNameRegex = new Regex("(%{1}[A-Z]{1}[a-z]*%{1})");
-    Regex flavorTextRegex = new Regex("(<{1}.*>{1})");
-
+    Regex flavorTextRegex = new Regex("(\\[{1}.*\\]{1})");
     private ScrollRect sr;
     private Coroutine animateText;
     State currentState;
@@ -66,36 +65,41 @@ public class AdventureGame : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Alpha1 + index))
             {
-                sr.normalizedPosition = new Vector2(0, 1);//Sets the scroll rect to the top.
-                currentState = nextStates[index].state;
-
-                if (currentState) { }
-                else
-                {
-                    textComponent.text = "null";
-                    textComponent.maxVisibleCharacters = 4;
-                    return;
-                }
-
-                storyText = currentState.GetStateStory();
-
-                SetFlags();
-
-                textComponent.text += "\n";//A line break to seperate the text from the decision links.
-
-                LinkTexts();
-
-                textComponent.text = storyText;
-
-                InsertFlagValues();
-                InsertFlavorText();
-                //start animating text after setting state.
-                animateText = StartCoroutine(AnimateTextCoroutine());
+                ChangeState(index);
             }
         }
     }
 
-    //TODO: This is all wrong
+    public void ChangeState(int nextStateIndex)
+    {
+        NextStateLink[] nextStates = currentState.GetNextStates();
+        sr.normalizedPosition = new Vector2(0, 1);//Sets the scroll rect to the top.
+        currentState = nextStates[nextStateIndex].state;
+
+        if (currentState) { }
+        else
+        {
+            textComponent.text = "null";
+            textComponent.maxVisibleCharacters = 4;
+            return;
+        }
+
+        storyText = currentState.GetStateStory();
+
+        SetFlags();
+
+        textComponent.text += "\n";//A line break to seperate the text from the decision links.
+
+        LinkTexts();
+
+        textComponent.text = storyText;
+
+        InsertFlagValues();
+        InsertFlavorText();
+        //start animating text after setting state.
+        animateText = StartCoroutine(AnimateTextCoroutine());
+    }
+    
     private void InsertFlavorText()
     {
         MatchCollection matches = flavorTextRegex.Matches(textComponent.text);
@@ -115,7 +119,7 @@ public class AdventureGame : MonoBehaviour
     /// <returns></returns>
     private string ReplaceFlavorHolders(Match m)
     {
-        string matchValue = m.Value.Trim(new Char[] { '<', '>'});
+        string matchValue = m.Value.Trim(new Char[] { '[', ']'});
         string[] values = matchValue.Split(',');
 
         string fixedValueOne = values[1].Replace(" ", "");
