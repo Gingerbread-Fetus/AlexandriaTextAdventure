@@ -3,7 +3,6 @@
 -Sound effects
 -Music
 -Adding buttons to the scrollable window instead of text.(This is a maybe, but if I can make text in a TMP object clickable I may as well)
--Add functionality for inserting character names into text. (Probably best achieved by adding a method to parse the text for delimiters)
 
 REWRITES:
 	-Rewrite intro states

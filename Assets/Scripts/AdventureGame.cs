@@ -14,7 +14,8 @@ public class AdventureGame : MonoBehaviour
     [SerializeField] Flags flagsData;
 
     FlagDictionary flags;
-    Regex replaceRegex = new Regex("(%{1}[A-Z]{1}[a-z]*%{1})");
+    Regex crewNameRegex = new Regex("(%{1}[A-Z]{1}[a-z]*%{1})");
+    Regex flavorTextRegex = new Regex("(<{1}.*>{1})");
 
     private ScrollRect sr;
     private Coroutine animateText;
@@ -97,24 +98,37 @@ public class AdventureGame : MonoBehaviour
     //TODO: This is all wrong
     private void InsertFlavorText()
     {
-        MatchCollection matches = Regex.Matches(storyText, "(<{1}.*>{1})");
-        foreach(Match match in matches)
-        {
-            string matchValue = match.Value.Trim(new Char[] {'<', '>' });
-            Debug.Log(matchValue);
-            string[] values = matchValue.Split(',');
-            Debug.Log(values.ToString());
-            if (flags[values[1]].Equals(values[2]))
-            {
-                Regex.Replace(textComponent.text, "(<{1}.*>{1})", values[0]);
-            }
-        }
+        MatchCollection matches = flavorTextRegex.Matches(textComponent.text);
+        textComponent.text = flavorTextRegex.Replace(textComponent.text, ReplaceFlavorHolders);
     }
 
     private void InsertFlagValues()
     {
-        MatchCollection matches = replaceRegex.Matches(textComponent.text);
-        textComponent.text = replaceRegex.Replace(textComponent.text, ReplaceDelimiters);
+        MatchCollection matches = crewNameRegex.Matches(textComponent.text);
+        textComponent.text = crewNameRegex.Replace(textComponent.text, ReplaceDelimiters);
+    }
+
+    /// <summary>
+    /// This is another helper method used as a delegate in inserting flavor text by the crew members.
+    /// </summary>
+    /// <param name="m"></param>
+    /// <returns></returns>
+    private string ReplaceFlavorHolders(Match m)
+    {
+        string matchValue = m.Value.Trim(new Char[] { '<', '>'});
+        string[] values = matchValue.Split(',');
+
+        string fixedValueOne = values[1].Replace(" ", "");
+        string fixedValueTwo = values[2].Replace(" ", "");
+
+        if (flags[fixedValueOne].Equals(fixedValueTwo))
+        {
+            return values[0]; 
+        }
+        else
+        {
+            return "";
+        }
     }
 
     /// <summary>
