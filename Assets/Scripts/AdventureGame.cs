@@ -52,14 +52,13 @@ public class AdventureGame : MonoBehaviour
         {
             StopAllCoroutines();
             currentState = startingState;
-            textComponent.text = currentState.GetStateStory();
+            textComponent.SetText(currentState.GetStateStory());
             textComponent.maxVisibleCharacters = textComponent.text.Length;
         }
     }
 
     private void ManageState()
     {
-        
         NextStateLink[] nextStates = currentState.GetNextStates();
         for(int index = 0; index < nextStates.Length; index++)
         {
@@ -73,7 +72,7 @@ public class AdventureGame : MonoBehaviour
     public void ChangeState(int nextStateIndex)
     {
         NextStateLink[] nextStates = currentState.GetNextStates();
-        sr.normalizedPosition = new Vector2(0, 1);//Sets the scroll rect to the top.
+        //sr.normalizedPosition = new Vector2(0, 1);//Sets the scroll rect to the top.
         currentState = nextStates[nextStateIndex].state;
 
         if (currentState) { }
@@ -88,14 +87,15 @@ public class AdventureGame : MonoBehaviour
 
         SetFlags();
 
-        textComponent.text += "\n";//A line break to seperate the text from the decision links.
+        storyText += "\n";//A line break to seperate the text from the decision links.
 
         LinkTexts();
 
-        textComponent.text = storyText;
+        textComponent.SetText(storyText);
 
         InsertFlagValues();
         InsertFlavorText();
+        
         //start animating text after setting state.
         animateText = StartCoroutine(AnimateTextCoroutine());
     }

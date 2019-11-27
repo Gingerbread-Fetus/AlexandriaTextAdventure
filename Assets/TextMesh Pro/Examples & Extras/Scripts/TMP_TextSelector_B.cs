@@ -396,14 +396,14 @@ namespace TMPro.Examples
 
             #region Link Selection Handling
             /*
-            // Check if Mouse intersects any words and if so assign a random color to that word.
+             //Check if Mouse intersects any words and if so assign a random color to that word.
             int linkIndex = TMP_TextUtilities.FindIntersectingLink(m_TextMeshPro, Input.mousePosition, m_Camera);
             if (linkIndex != -1)
             {
                 TMP_LinkInfo linkInfo = m_TextMeshPro.textInfo.linkInfo[linkIndex];
                 int linkHashCode = linkInfo.hashCode;
 
-                //Debug.Log(TMP_TextUtilities.GetSimpleHashCode("id_02"));
+                Debug.Log(TMP_TextUtilities.GetSimpleHashCode("id_02"));
 
                 switch (linkHashCode)
                 {
@@ -421,7 +421,7 @@ namespace TMPro.Examples
 
                 }
 
-                // Example of how to modify vertex attributes like colors
+                 Example of how to modify vertex attributes like colors
                 #region Vertex Attribute Modification Example
                 UIVertex[] uiVertices = m_TextMeshPro.textInfo.meshInfo.uiVertices;
 
