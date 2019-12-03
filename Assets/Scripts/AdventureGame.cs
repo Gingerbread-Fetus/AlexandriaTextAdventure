@@ -16,6 +16,7 @@ public class AdventureGame : MonoBehaviour
     FlagDictionary flags;
     Regex crewNameRegex = new Regex("(%{1}[A-Z]{1}[a-z]*%{1})");
     Regex flavorTextRegex = new Regex("(\\[{1}.*\\]{1})");
+    ButtonPanel buttonPanel;
     private ScrollRect sr;
     private Coroutine animateText;
     State currentState;
@@ -24,6 +25,7 @@ public class AdventureGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        buttonPanel = FindObjectOfType<ButtonPanel>();
         currentState = startingState;
         textComponent.text = currentState.GetStateStory();
         sr = textComponent.GetComponentInParent<ScrollRect>();
@@ -87,15 +89,42 @@ public class AdventureGame : MonoBehaviour
 
         SetFlags();
 
-        storyText += "\n";//A line break to seperate the text from the decision links.
-
-        LinkTexts();
+        buttonPanel.ClearPanel();
+        LinkButtons();
 
         textComponent.SetText(storyText);
 
         InsertFlagValues();
         InsertFlavorText();
         
+        //start animating text after setting state.
+        animateText = StartCoroutine(AnimateTextCoroutine());
+    }
+
+    public void ChangeState(State nextState)
+    {
+        currentState = nextState;
+
+        if (currentState) { }
+        else
+        {
+            textComponent.text = "null";
+            textComponent.maxVisibleCharacters = 4;
+            return;
+        }
+
+        storyText = currentState.GetStateStory();
+
+        SetFlags();
+        
+        buttonPanel.ClearPanel();
+        LinkButtons();
+
+        textComponent.SetText(storyText);
+
+        InsertFlagValues();
+        InsertFlavorText();
+
         //start animating text after setting state.
         animateText = StartCoroutine(AnimateTextCoroutine());
     }
@@ -159,28 +188,25 @@ public class AdventureGame : MonoBehaviour
         }
     }
 
-    private void LinkTexts()
+    private void LinkButtons()
     {
         var nextStates = currentState.GetNextStates();
-        string LinkText = "";
-        LinkText += "\n";//Line break to add space between body and linking texts
         for (int index = 0; index < nextStates.Length; index++)
         {
+            
             if (nextStates[index].state == null || nextStates == null)
             {
                 Debug.Log("A state in Next States was not set");
-                storyText += "\n ERROR";
             }
             if (CheckStateFlag(nextStates[index].state))
             {
-                LinkText += (index + 1).ToString() + ". " + nextStates[index].linkText + " \n";
+                buttonPanel.AddButton(nextStates[index]);
             }
             else
             {
-                LinkText += (index + 1).ToString() + ". Requirement: " + nextStates[index].state.GetFlagValue() + " " + nextStates[index].state.CheckRequirementValue() + " not met.\n";
-            } 
+                Debug.Log(". Requirement: " + nextStates[index].state.GetFlagValue() + " " + nextStates[index].state.CheckRequirementValue() + " not met.\n");
+            }
         }
-        storyText += LinkText;
     }
 
     private bool CheckStateFlag(State testState)

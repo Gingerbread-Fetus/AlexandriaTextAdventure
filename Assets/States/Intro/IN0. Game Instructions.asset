@@ -15,18 +15,19 @@ MonoBehaviour:
   storyText: 'Welcome to this game!
 
 
-    The way to play is simple, just read the entry on each screen and press the button
-    on the keyboard that matches the entry next to the path that you want to take
-    next.
+    The way to play is simple, just read the entry on each screen and click the button
+    that corresponds with the option you want to explore next. You can also press
+    the matching number key on the keyboard to progress.
 
 
-    Press q to quit at any time.
+    Press q to quit at any time and return here to restart
 
-    Press 1 to continue. '
+    .
+
+    Press 1 or click the button to continue. '
   nextStates:
   - state: {fileID: 11400000, guid: a9012ce58fad0d14cba40c3db506d6d0, type: 2}
     linkText: Begin
-  linkText: Back to beginning.
   flagRequirement:
     flagKey: 
     flagValue: 

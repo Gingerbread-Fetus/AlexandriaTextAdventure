@@ -26,7 +26,7 @@ MonoBehaviour:
   - state: {fileID: 11400000, guid: 1f85082f5f7e6874eb78c25946c09c76, type: 2}
     linkText: '[Lucky] Lucky reacts...'
   - state: {fileID: 11400000, guid: b1f8727afa8fac741af6a56d0103a6b1, type: 2}
-    linkText: '[Cyborg] Is that ship speaking to you?'
+    linkText: '[Thrall] Is that ship speaking to you?'
   flagRequirement:
     flagKey: 
     flagValue: 

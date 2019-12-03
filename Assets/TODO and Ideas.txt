@@ -2,10 +2,9 @@
 - Adding effects to the text, like temporary shaking.
 -Sound effects
 -Music
--Adding buttons to the scrollable window instead of text.(This is a maybe, but if I can make text in a TMP object clickable I may as well)
+-Fix animated text bug.
 
 REWRITES:
 	-Rewrite intro states
 	-Renaming Characters
-	-Better prose
 	-Chart story and add the early branch
