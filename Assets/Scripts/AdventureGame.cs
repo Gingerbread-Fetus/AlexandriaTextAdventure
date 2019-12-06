@@ -21,6 +21,7 @@ public class AdventureGame : MonoBehaviour
     private Coroutine animateText;
     State currentState;
     private string storyText;
+    private int visibleText;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class AdventureGame : MonoBehaviour
         textComponent.text = currentState.GetStateStory();
         sr = textComponent.GetComponentInParent<ScrollRect>();
         flags = flagsData.getFlagDictionary();
+        animateText = StartCoroutine(AnimateTextCoroutine());
     }
 
     // Update is called once per frame
@@ -74,8 +76,11 @@ public class AdventureGame : MonoBehaviour
     public void ChangeState(int nextStateIndex)
     {
         NextStateLink[] nextStates = currentState.GetNextStates();
-        //sr.normalizedPosition = new Vector2(0, 1);//Sets the scroll rect to the top.
+        sr.normalizedPosition = new Vector2(0, 1);//Sets the scroll rect to the top.
         currentState = nextStates[nextStateIndex].state;
+
+        StopCoroutine(animateText);
+        textComponent.maxVisibleCharacters = 0;
 
         if (currentState) { }
         else
@@ -104,6 +109,9 @@ public class AdventureGame : MonoBehaviour
     public void ChangeState(State nextState)
     {
         currentState = nextState;
+
+        StopCoroutine(animateText);
+        textComponent.maxVisibleCharacters = 0;
 
         if (currentState) { }
         else

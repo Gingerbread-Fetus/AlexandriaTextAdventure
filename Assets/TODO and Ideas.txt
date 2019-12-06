@@ -2,7 +2,6 @@
 - Adding effects to the text, like temporary shaking.
 -Sound effects
 -Music
--Fix animated text bug.
 
 REWRITES:
 	-Rewrite intro states
